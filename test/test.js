@@ -9,8 +9,8 @@ describe('Weather module', () => {
     	const locations = 'Tokyo'
     	const result = await Weather.getTemperature(locations)
       	expect(result[0]).to.equal(200)
-    })
-  })
+   	})
+	})
 
   describe('getTemperature 98713', () => {
     it('This should return error', async () => {
