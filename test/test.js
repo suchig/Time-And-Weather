@@ -6,7 +6,7 @@ describe('Weather module', () => {
     it('This should return local time in Tokyo', async () => {
     	const locations = 'Tokyo'
     	const result = await Weather.getTemperature(locations)
-      	expect(result).to.equal(303.99)
+      	expect(result[0]).to.equal("200")
     })
   })
 })
