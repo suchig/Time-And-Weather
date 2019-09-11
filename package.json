@@ -1,0 +1,27 @@
+{
+  "name": "time-and-weather",
+  "version": "1.0.0",
+  "description": "To display time and weather of location",
+  "main": "index.js",
+  "directories": {
+    "test": "test"
+  },
+  "scripts": {
+    "test": "mocha test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/suchig/Time-And-Weather.git"
+  },
+  "author": "Suchitra Ganapathi",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/suchig/Time-And-Weather/issues"
+  },
+  "homepage": "https://github.com/suchig/Time-And-Weather#readme",
+  "dependencies": {
+    "chai": "^4.2.0",
+    "mocha": "^6.2.0",
+    "request": "^2.88.0"
+  }
+}
