@@ -8,12 +8,16 @@ async function getTime(lat,lon){
 	try{
 		const response = await ApiRequest.getDataFromApi(option,null,lat,lon)
 		const timeMap = JSON.parse(response)
+		//console.log(timeMap)
 		if(timeMap.hasOwnProperty("status")){
 			returnValue=[timeMap.status.value,timeMap.status.message]
 		}
-		else{
+		else if(!timeMap.hasOwnProperty("time")){
+			returnValue=["error","Invalid Lat and Longitude"]
+		}
+		else {
 			returnValue = ["200",timeMap.time]
-			//console.log(timeMap)
+			console.log(returnValue)
 		}
 	}
 	catch(error){
