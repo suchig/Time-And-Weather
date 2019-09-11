@@ -21,7 +21,8 @@ function getDataFromApi(typeOfApi, location, lat, long){
 			
 	  		if(err){
 	  			reject(err)
-	  		} else {
+	  		} 
+	  		else {
 	  			
 	  			resolve(body )
 	  		}

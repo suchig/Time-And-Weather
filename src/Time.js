@@ -10,6 +10,7 @@ async function getTime(lat,lon){
 		const response = await ApiRequest.getDataFromApi(option,null,lat,lon)
 		const timeMap = JSON.parse(response)
 		returnValue = timeMap.time
+		//console.log(timeMap)
 	}
 	catch(error){
 		console.log(error)
@@ -19,7 +20,7 @@ async function getTime(lat,lon){
 	return returnValue
 }
 
- async function main(){
+ /*async function main(){
 	const arg_len = process.argv.length 
 
 
@@ -32,8 +33,15 @@ async function getTime(lat,lon){
 			console.log("Time at "+process.argv[i]+" is "+timeData);
 		}
 	}
-}
+}*/
 
-main()
+
+process.argv.slice(2)
+			.map(async (location) => {
+				const weatherData =   await Weather.getTemperature(location)
+				const timeData = await getTime(weatherData[1].lat,weatherData[1].lon)
+				console.log("Time at "+location+" is "+timeData);
+			})
+
 
 exports.getTime = getTime
