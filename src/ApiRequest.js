@@ -13,7 +13,7 @@ function getDataFromApi(typeOfApi, location, lat, long){
 		url = `http://api.openweathermap.org/data/2.5/weather?zip=${location}&appid=${apiKey}`
 	}
 	else{
-		url = `http://api.geonames.org/timezone?lat=${lat}&lng=${long}&username=demo`
+		url = `http://api.geonames.org/timezoneJSON?lat=${lat}&lng=${long}&username=demo`
 	}
 
 	return new Promise((resolve, reject) => {
